@@ -8,6 +8,15 @@
   font-display: swap;
 }
 
+:root {
+  --display-xl-font-size: 88px;
+  --display-l-font-size: 57px;
+  --display-m-font-size: 45px;
+  --display-s-font-size: 36px;
+  --display-xs-font-size: 24px;
+
+  --border-background-lines: 2px solid #48a93b67;
+}
 
 body {
   padding: 0;
@@ -15,6 +24,122 @@ body {
   font-family: 'alex-google' !important;
 }
 
-div p {
-  background-color: pink;
+body,
+main {
+  min-height: 100vh;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1 {
+  font-size: var(--display-m-font-size) !important;
+  line-height: 1.1;
+}
+
+@media screen and (min-width: 600px) {
+  h1 {
+    font-size: var(--display-xl-font-size) !important;
+  }
+}
+
+h2 {
+  font-size: var(--display-s-font-size) !important;
+}
+
+@media screen and (min-width: 600px) {
+  h2 {
+    font-size: var(--display-m-font-size) !important;
+  }
+}
+
+h3 {
+  font-size: var(--display-xs-font-size) !important;
+}
+
+.vertical-lines {
+  border-left: var(--border-background-lines);
+  border-right: var(--border-background-lines);
+}
+
+.horizontal-lines {
+  border-bottom: var(--border-background-lines);
+}
+
+footer.horizontal-lines {
+  border-top: var(--border-background-lines);
+  border-bottom: none;
+}
+
+article .container {
+  padding: 12px 0 36px;
+}
+
+.heading {
+  border-bottom: var(--border-background-lines);
+  padding: 0 12px 6px;
+  margin-bottom: 36px;
+}
+
+.accordions {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 12px;
+}
+
+
+.accordion-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border: none;
+  border-bottom: var(--border-background-lines);
+  border-top: var(--border-background-lines);
+  background-color: transparent;
+}
+
+.accordion-top h3 {
+  margin: 0;
+}
+
+.accordion-top svg {
+  height: 1.5rem;
+}
+
+.accordion-top.open svg {
+  transform: rotate(180deg);
+}
+
+.accordion .drawer p {
+  margin: 12px 12px 24px;
+}
+
+.accordion .drawer.closed {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.ghost {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.skill-icons {
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.icons svg {
+  height: 2rem;
 }
