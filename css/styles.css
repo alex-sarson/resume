@@ -1,6 +1,18 @@
+@font-face {
+  font-family: 'alex-google';
+  src: url('fonts/product-sans/ProductSans-Regular.woff2') format('woff2'),
+    url('fonts/product-sans/ProductSans-Regular.woff') format('woff'),
+    url('fonts/product-sans/ProductSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
 body {
   padding: 0;
   margin: 0;
+  font-family: 'alex-google' !important;
 }
 
 div p {
